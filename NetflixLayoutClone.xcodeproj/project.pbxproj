@@ -58,16 +58,72 @@
 		4900B491286BFD3600AF6C4B /* NetflixLayoutClone */ = {
 			isa = PBXGroup;
 			children = (
-				4900B492286BFD3600AF6C4B /* AppDelegate.swift */,
-				4900B494286BFD3600AF6C4B /* SceneDelegate.swift */,
-				4900B496286BFD3600AF6C4B /* ViewController.swift */,
-				4900B4A6286BFD9B00AF6C4B /* MovieManager.swift */,
-				4900B498286BFD3600AF6C4B /* Main.storyboard */,
-				4900B49B286BFD3900AF6C4B /* Assets.xcassets */,
-				4900B49D286BFD3900AF6C4B /* LaunchScreen.storyboard */,
+				494B7B26286CA03E009FB009 /* Extensions */,
+				494B7B25286CA018009FB009 /* Resources */,
+				494B7B24286CA00B009FB009 /* Managers */,
+				494B7B23286CA004009FB009 /* Models */,
+				494B7B22286C9FF8009FB009 /* AppSetup */,
+				494B7B20286C9FDF009FB009 /* Views */,
+				494B7B21286C9FF2009FB009 /* Controllers */,
 				4900B4A0286BFD3900AF6C4B /* Info.plist */,
 			);
 			path = NetflixLayoutClone;
+			sourceTree = "<group>";
+		};
+		494B7B20286C9FDF009FB009 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4900B49D286BFD3900AF6C4B /* LaunchScreen.storyboard */,
+				4900B498286BFD3600AF6C4B /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		494B7B21286C9FF2009FB009 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4900B496286BFD3600AF6C4B /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		494B7B22286C9FF8009FB009 /* AppSetup */ = {
+			isa = PBXGroup;
+			children = (
+				4900B492286BFD3600AF6C4B /* AppDelegate.swift */,
+				4900B494286BFD3600AF6C4B /* SceneDelegate.swift */,
+			);
+			path = AppSetup;
+			sourceTree = "<group>";
+		};
+		494B7B23286CA004009FB009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		494B7B24286CA00B009FB009 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4900B4A6286BFD9B00AF6C4B /* MovieManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		494B7B25286CA018009FB009 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4900B49B286BFD3900AF6C4B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		494B7B26286CA03E009FB009 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

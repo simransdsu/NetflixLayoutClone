@@ -6,6 +6,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,6 +16,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dbb-bj-rEP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hpE-Yr-Gx7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -49,18 +51,49 @@
         <!--View Controller-->
         <scene sceneID="5c4-AD-RCb">
             <objects>
-                <viewController id="2Jv-uj-77y" sceneMemberID="viewController">
+                <viewController id="2Jv-uj-77y" customClass="ViewController" customModule="NetflixLayoutClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vX2-w7-j3G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GpT-KI-Yjb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EnE-gI-0tn">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FuH-DD-JKh">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EeO-EL-yax">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Oe8-Lc-jEX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GpT-KI-Yjb" secondAttribute="bottom" id="8hT-vX-79t"/>
+                            <constraint firstItem="GpT-KI-Yjb" firstAttribute="leading" secondItem="Oe8-Lc-jEX" secondAttribute="leading" id="BCr-cl-bI1"/>
+                            <constraint firstItem="GpT-KI-Yjb" firstAttribute="trailing" secondItem="Oe8-Lc-jEX" secondAttribute="trailing" id="BMc-yM-27U"/>
+                            <constraint firstItem="GpT-KI-Yjb" firstAttribute="top" secondItem="Oe8-Lc-jEX" secondAttribute="top" id="dwi-uV-aAr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KXw-6S-5Cn"/>
+                    <connections>
+                        <outlet property="collectionView" destination="GpT-KI-Yjb" id="NjL-Hd-ygK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2rK-tA-UGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1381" y="-1233"/>
+            <point key="canvasLocation" x="1379.7101449275362" y="-1233.4821428571429"/>
         </scene>
         <!--Search-->
         <scene sceneID="syD-QG-sRz">
@@ -102,7 +135,7 @@
         <scene sceneID="LUz-Rq-KUo">
             <objects>
                 <navigationController id="Ai0-UK-fwC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" selectedImage="dot" systemItem="more" id="XSr-DL-twF"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="XSr-DL-twF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gUl-Hr-Ezs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -115,23 +148,23 @@
             </objects>
             <point key="canvasLocation" x="480" y="1017"/>
         </scene>
-        <!--View Controller-->
+        <!--Search-->
         <scene sceneID="bxF-6z-iRw">
             <objects>
-                <viewController id="FhT-aD-IOm" sceneMemberID="viewController">
+                <viewController title="Search" id="FhT-aD-IOm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dpT-8j-RfD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="d9M-hx-Oi0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZRo-lE-HrG"/>
+                    <navigationItem key="navigationItem" title="Search" id="ZRo-lE-HrG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1d-zD-vuw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1380" y="-464"/>
         </scene>
-        <!--View Controller-->
+        <!--Downloads-->
         <scene sceneID="SSB-o6-3KU">
             <objects>
                 <viewController id="34M-tA-475" sceneMemberID="viewController">
@@ -141,13 +174,13 @@
                         <viewLayoutGuide key="safeArea" id="att-0P-juO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wga-eo-oQa"/>
+                    <navigationItem key="navigationItem" title="Downloads" id="wga-eo-oQa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gz1-uw-NWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1380" y="266"/>
         </scene>
-        <!--View Controller-->
+        <!--More-->
         <scene sceneID="PkR-DP-wtO">
             <objects>
                 <viewController id="WTg-c1-Gv3" sceneMemberID="viewController">
@@ -157,7 +190,7 @@
                         <viewLayoutGuide key="safeArea" id="xQB-2n-F9a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QNO-ug-iGB"/>
+                    <navigationItem key="navigationItem" title="More" id="QNO-ug-iGB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezF-M8-mFX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,7 +198,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dot" width="128" height="128"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
